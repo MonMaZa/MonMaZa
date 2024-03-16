@@ -2,7 +2,7 @@
 
 Projects
 https://poslite.marketplace.com.mm
-https://npc.zacompany.dev (for https://netpachi.com.mm)
+https://npc.zacompany.dev (for https://netpachi.com)
 
 https://vue3datepicker.com/props/keyboard/
 
