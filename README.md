@@ -72,7 +72,7 @@ TablePlus - https://tableplus.com/
 You can install Laravel ER Diagram Generator via Composer by running:
 lua
 - composer require beyondcode/laravel-er-diagram-generator --dev
-Generate ER Diagram:
+  # # Generate ER Diagram:
 Once installed, you can generate the ER diagram by running the following Artisan command:
 - php artisan generate:erd
  
