@@ -68,4 +68,13 @@ And you can also access your database with mac MySQL client to make your life ea
 Sequel Pro - https://www.sequelpro.com/
 TablePlus - https://tableplus.com/
 
+# Produce ER Diagram from Laravel
+You can install Laravel ER Diagram Generator via Composer by running:
+lua
+composer require beyondcode/laravel-er-diagram-generator --dev
+Generate ER Diagram:
+Once installed, you can generate the ER diagram by running the following Artisan command:
+php artisan generate:erd
+12:23
+brew install graphviz
 
