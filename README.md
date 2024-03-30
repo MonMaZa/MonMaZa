@@ -95,6 +95,9 @@ Unfold All unfolds all regions in the editor:
 Ctrl + K, Ctrl + J on Windows and Linux
 ⌘ + K, ⌘ + J on macOS
 
+# VS Code Tip & Tricks
+https://github.com/Microsoft/vscode-tips-and-tricks#find-all-references
+
  
 
 
