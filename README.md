@@ -98,6 +98,9 @@ Ctrl + K, Ctrl + J on Windows and Linux
 # VS Code Tip & Tricks
 https://github.com/Microsoft/vscode-tips-and-tricks#find-all-references
 
+# Laravel Jenssenger Agent to access http header user-agent
+https://github.com/jenssegers/agent
+
  
 
 
