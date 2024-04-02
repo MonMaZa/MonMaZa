@@ -101,6 +101,18 @@ https://github.com/Microsoft/vscode-tips-and-tricks#find-all-references
 # Laravel Jenssenger Agent to access http header user-agent
 https://github.com/jenssegers/agent
 
+# GitHub
+- git add  ***/***/***/ProductController.php
+- git status
+- git commit -m "*****"
+- git pull origin main
+- git config pull.rebase false
+- git branch
+- git checkout *** (change branch)
+- git push origin main
+- Merge(Commit on left pane on vs code)
+- git log --oneline (check log)
+
  
 
 
