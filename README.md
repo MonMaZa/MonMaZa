@@ -113,6 +113,49 @@ https://github.com/jenssegers/agent
 - Merge(Commit on left pane on vs code)
 - git log --oneline (check log)
 
- 
+# Add a column on the production database
+- php artisan make:migration add_column_name_to_table_name --table=table_name
+- <?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class AddColumnNameToTableName extends Migration
+{
+    public function up()
+    {
+        Schema::table('table_name', function (Blueprint $table) {
+            $table->string('column_name')->nullable(); // Change data type as needed
+        });
+    }
+
+    public function down()
+    {
+        Schema::table('table_name', function (Blueprint $table) {
+            $table->dropColumn('column_name');
+        });
+    }
+}
+- php artisan migrate
+
+# Make a backup of production database
+- ssh your_username@your_server_ip
+- cd /var/backups [anyPath]
+- pg_dump -U your_username -d your_database_name -f your_backup_file_name.sql [pg_dump is for PostgresSQL]
+- secure the backup file [chmod 600 your_backup_file_name.sql]
+- scp your_username@your_server_ip:/var/backups/your_backup_file_name.sql /path/to/local/directory [download file]
+
+# Database Backup in Laravel
+- composer require spatie/laravel-backup
+- php artisan vendor:publish --provider="Spatie\Backup\BackupServiceProvider"
+- php artisan backup:run
+- app/Console/Kernel.php -> protected function schedule(Schedule $schedule)
+{
+    $schedule->command('backup:run')->daily()->at('01:00');
+}
+
+
+
 
 
