@@ -153,7 +153,11 @@ class AddColumnNameToTableName extends Migration
 - app/Console/Kernel.php -> protected function schedule(Schedule $schedule)
 {
     $schedule->command('backup:run')->daily()->at('01:00');
+
 }
+
+# Map/Through 
+https://zadeveloper.slack.com/archives/D066JQ8A5QD/p1712817394326999
 
 
 
