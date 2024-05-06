@@ -162,6 +162,9 @@ https://zadeveloper.slack.com/archives/D066JQ8A5QD/p1712817394326999
 #instead of var_export ( php array())
 https://github.com/brick/varexporter
 
+# ICons
+https://icones.js.org/
+
 
 
 
