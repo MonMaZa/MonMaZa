@@ -115,29 +115,57 @@ https://github.com/jenssegers/agent
 
 # Add a column on the production database
 - php artisan make:migration add_column_name_to_table_name --table=table_name
-- <?php
+    <?php
 
+     use Illuminate\Database\Migrations\Migration;
+     use Illuminate\Database\Schema\Blueprint;
+     use Illuminate\Support\Facades\Schema;
+     
+     class AddColumnNameToTableName extends Migration
+     {
+  
+         public function up()
+         {
+             Schema::table('table_name', function (Blueprint $table) {
+                 $table->string('column_name')->nullable(); // Change data type as needed
+             });
+         }
+
+        public function down()
+        {
+            Schema::table('table_name', function (Blueprint $table) {
+                $table->dropColumn('column_name');
+            });
+        }
+    }
+- php artisan migrate
+# Modify a column on the production database
+php artisan make:migration modify_description_column_in_artworks_table
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddColumnNameToTableName extends Migration
+class ModifyDescriptionColumnInArtworksTable extends Migration
 {
+ 
     public function up()
     {
-        Schema::table('table_name', function (Blueprint $table) {
-            $table->string('column_name')->nullable(); // Change data type as needed
+        Schema::table('artworks', function (Blueprint $table) {
+            $table->text('description')->change(); // Change the column type to 'text'
         });
     }
 
     public function down()
     {
-        Schema::table('table_name', function (Blueprint $table) {
-            $table->dropColumn('column_name');
+        Schema::table('artworks', function (Blueprint $table) {
+            // If needed, you can define the down method to revert the changes
+            // For example, reverting the column type back to 'string'
+            // $table->string('description')->change();
         });
     }
 }
-- php artisan migrate
+
+
 
 # Make a backup of production database
 - ssh your_username@your_server_ip
