@@ -196,6 +196,12 @@ https://icones.js.org/
 # JSON View Site
 https://jsonviewer.stack.hu/
 
+# Laravel Clear Cache
+php artisan cache:clear
+php artisan config:clear
+php artisan view:clear
+
+
 
 
 
